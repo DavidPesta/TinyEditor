@@ -7,7 +7,14 @@
 <script type="text/javascript" src="tinyeditor.js"></script>
 </head>
 <body>
-<textarea id="input" style="width:400px; height:200px"></textarea>
+	<form onSubmit='return false;'>
+		<div id="wrapper_element"></div>
+		<label>text : </label>
+		<div id="wrapper_input">
+			<textarea id="input" style="width:400px; height:200px"></textarea>
+		</div>
+		<input type="submit" value="submit">
+	</form>
 <script type="text/javascript">
 new TINY.editor.edit('editor',{
 	id:'input',
