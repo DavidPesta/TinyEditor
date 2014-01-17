@@ -105,7 +105,7 @@ TINY.editor=function(){
 		var m='<html><head>', bodyid=obj.bodyid?" id=\""+obj.bodyid+"\"":"";
 		if(obj.cssfile){m+='<link rel="stylesheet" href="'+obj.cssfile+'" />'}
 		if(obj.css){m+='<style type="text/css">'+obj.css+'</style>'}
-		m+='</head><body'+bodyid+'>'+(obj.content||this.t.value);
+		m+='</head><body class="tinyeditor_body" '+bodyid+'>'+(obj.content||this.t.value);
 		m+='</body></html>';
 		this.e.write(m);
 		this.e.close(); this.e.designMode='on'; this.d=1;
@@ -151,7 +151,7 @@ TINY.editor=function(){
 		v=v.replace(/<span style="font-style: italic;?">(.*)<\/span>/gi,'<em>$1</em>');
 		v=v.replace(/<span style="font-weight: bold;?">(.*)<\/span>|<b\b[^>]*>(.*?)<\/b[^>]*>/gi,'<strong>$1</strong>')
 		this.t.value = v
-		console.log(this.t.value);
+		// console.log(this.t.value);
 	},
 	edit.prototype.print=function(){
 		this.i.contentWindow.print()
