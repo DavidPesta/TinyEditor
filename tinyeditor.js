@@ -151,6 +151,7 @@ TINY.editor=function(){
 		v=v.replace(/<span style="font-style: italic;?">(.*)<\/span>/gi,'<em>$1</em>');
 		v=v.replace(/<span style="font-weight: bold;?">(.*)<\/span>|<b\b[^>]*>(.*?)<\/b[^>]*>/gi,'<strong>$1</strong>')
 		this.t.value = v
+		this.t.innerText = v
 		// console.log(this.t.value);
 	},
 	edit.prototype.print=function(){
