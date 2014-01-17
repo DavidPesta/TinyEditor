@@ -133,7 +133,7 @@ TINY.editor=function(){
 		}
 	};
 	edit.prototype.sync=function(t,i){
-		var v= i;
+		var v= this.i.contentWindow.document.body.innerHTML;
 		v=v.replace(/<span class="apple-style-span">(.*)<\/span>/gi,'$1');
 		v=v.replace(/ class="apple-style-span"/gi,'');
 		v=v.replace(/<span style="">/gi,'');
@@ -150,8 +150,8 @@ TINY.editor=function(){
 		v=v.replace(/<span style="font-weight: bold;?">(.*)<\/span>/gi,'<strong>$1</strong>');
 		v=v.replace(/<span style="font-style: italic;?">(.*)<\/span>/gi,'<em>$1</em>');
 		v=v.replace(/<span style="font-weight: bold;?">(.*)<\/span>|<b\b[^>]*>(.*?)<\/b[^>]*>/gi,'<strong>$1</strong>')
-		t.value = v
-		console.log(t.value);
+		this.t.value = v
+		console.log(this.t.value);
 	},
 	edit.prototype.print=function(){
 		this.i.contentWindow.print()
